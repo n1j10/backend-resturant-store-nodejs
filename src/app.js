@@ -24,6 +24,15 @@ app.use(morgan("dev"));
 app.use(express.json({ limit: "2mb" }));
 app.use(apiLimiter);
 
+app.get(["/", "/api"], (req, res) => {
+  res.json({
+    success: true,
+    message: "Italian Store API",
+    health: "/health",
+    apiBase: "/api/v1",
+  });
+});
+
 app.get("/health", (req, res) => {
   res.json({
     success: true,
