@@ -13,7 +13,7 @@ const register = asyncHandler(async (req, res) => {
   const existing = await User.findOne({ email: email.toLowerCase() });
   if (existing) {
     res.status(409);
-    throw new Error("Email already in use");
+    throw new Error("Email already in usee");
   }
 
   const user = await User.create({ name, email, password, phone });

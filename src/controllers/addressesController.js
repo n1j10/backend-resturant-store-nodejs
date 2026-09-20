@@ -106,7 +106,7 @@ const setDefaultAddress = asyncHandler(async (req, res) => {
 
   res.json({
     success: true,
-    message: "Default address updated",
+    message: "Default address updated1",
     data: address,
   });
 });
@@ -118,3 +118,5 @@ module.exports = {
   deleteAddress,
   setDefaultAddress,
 };
+
+//111d
